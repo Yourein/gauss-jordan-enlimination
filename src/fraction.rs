@@ -4,7 +4,7 @@ use std::ops::{Add, Sub, Mul, Div};
 use crate::error::{ConvertionError, CalculationError};
 
 
-/// This struct represents rational number.
+/// This struct represents a rational number.
 /// There are two parameters p and q. To represent p/q;
 #[derive(Copy, Clone, PartialEq)]
 pub struct Fraction {
@@ -13,7 +13,6 @@ pub struct Fraction {
 }
 
 // Calculation
-
 impl Fraction {
     pub fn inverse(&self) -> Result<Fraction, CalculationError>  {
         if self.p == 0 {
